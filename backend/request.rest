@@ -1,0 +1,50 @@
+# Get all datas
+GET http://localhost:8800/datas
+
+###
+
+# Get data by ID
+GET http://localhost:8800/datas/4
+
+###
+
+# Create new data
+POST http://localhost:8800/datas
+Content-Type: application/json
+
+{
+    "KodeCompany": "TPM",
+    "KodeBranch": "PST",
+    "LevelNo": 5,
+    "KodeAsetGroup": "TN",
+    "NamaAsetGroup": "Tanah",
+    "Nickname": "Dadang",
+    "Prefix": "Sample",
+    "KodeParent": "TN",
+    "SequenceNo": "Sample",
+    "Remark": "Sample"
+}
+
+###
+
+# Edit existing data
+PATCH http://localhost:8800/datas/1
+Content-Type: application/json
+
+{
+    "KodeCompany": "Edited",
+    "KodeBranch": "Edited",
+    "LevelNo": 2,
+    "KodeAsetGroup": "Edited",
+    "NamaAsetGroup": "Edited",
+    "Nickname": "Edited",
+    "Prefix": "Edited",
+    "KodeParent": "Edited",
+    "SequenceNo": "Edited",
+    "Remark": "Edited"
+}
+
+###
+
+# Delete data
+DELETE http://localhost:8800/datas/1
